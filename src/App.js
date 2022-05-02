@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import Navbar from './components/Navbar.js';
+import Post from './components/Post.js'
+import data from './data.js'
+
 import './App.css';
 
 function App() {
+
+  let posts = data.map(item => {
+    return (
+        <Post key={item.id}
+              {...item}
+        />
+    );
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <section className='posts--list'>
+        {posts}
+      </section>
     </div>
   );
 }
