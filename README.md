@@ -9,7 +9,7 @@ In order to clone the repo, open your terminal and type:
 
     git clone https://github.com/salmakld/Travel-Journey.git 
 
-To install the required dependencies, cd into the new folder and type:
+To install the required dependencies, cd into `Travel-Journey` folder and type:
     
     npm install    
 
